@@ -21,5 +21,19 @@ for line in f:
 f.close()
 f2.close()
 f3.close()
-        
+
+f3 = open('testing.pos','r')
+f4 = open('testing.words','w')
+wordList = (f3.read().strip().split('\n'))
+for line in wordList:
+    if line != '':
+        word, pos = line.split('\t')
+        f4.write(word + '\n')
+    else:
+         f4.write('\n')
+
+f3.close()
+f4.close()
+
+
         
