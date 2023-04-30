@@ -79,7 +79,7 @@ def train(filenames):
 
     #calculate transition probabilities 
     trans_probs = defaultdict(float)
-    alpha = 0.001
+    alpha = 0.000001
     for t1 in tag_set:
         for t2 in tag_set:
             t1_count = tag_counts.get(t1,0)
